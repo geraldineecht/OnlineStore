@@ -29,18 +29,19 @@ float creditCard::getBalance()
 	return _balance;
 }
 
-void creditCard::discount(int i)
+bool creditCard::discount(float price)
 {
 	Inventory inventory;
-	if (inventory.getProducts(i).getPrice() < _balance)
+	if (price <= _balance)
 	{
-		_balance -= inventory.getProducts(i).getPrice();
-		cout << _balance << endl << "Thanks for your purchase" << endl;
+		_balance -= price;
+		cout << _balance << endl
+			 << "Thanks for your purchase" << endl;
+		return true;
 	}
-	else if (inventory.getProducts(i).getPrice() > _balance)
+	else
 	{
 		cout << "Credit Card Declined";
+		return false;
 	}
-	
 }
-

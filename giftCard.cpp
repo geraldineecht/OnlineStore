@@ -29,17 +29,18 @@ float giftCard::getBalance()
 	return _balance;
 }
 
-void giftCard::discount(int i)
+bool giftCard::discount(float price)
 {
-	Inventory inventory;
-	if (inventory.getProducts(i).getPrice() < _balance)
+	if (price <= _balance)
 	{
-		_balance -= inventory.getProducts(i).getPrice();
-		cout << _balance << endl << "Thanks for your purchase" << endl;
+		_balance -= price;
+		cout << _balance << endl
+			 << "Thanks for your purchase" << endl;
+		return true;
 	}
-	else if (inventory.getProducts(i).getPrice() > _balance)
+	else
 	{
 		cout << "Gift Card Declined";
+		return false;
 	}
 }
-

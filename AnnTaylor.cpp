@@ -10,6 +10,5 @@ int main()
 
     AnnTaylor.start(clientA);
 
-    cout << endl << "Hello World!\n";
+    cout << "Thank you come again!"
 }
-

@@ -21,8 +21,7 @@ public:
 	void setCardBalance(float);
 
 	float getBalance();
-	void discount(int);
+	bool discount(float);
 
 	//void discount(Product);
 };
-

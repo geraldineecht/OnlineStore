@@ -9,5 +9,5 @@ private:
 public:
 	Inventory();
 	Product getProducts(int);
+	Product reduceStock(int);
 };
-

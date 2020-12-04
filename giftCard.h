@@ -22,6 +22,5 @@ public:
 
 	float getBalance();
 
-	void discount(int);
+	bool discount(float);
 };
-
