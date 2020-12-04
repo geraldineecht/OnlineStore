@@ -1,0 +1,2 @@
+D:\CPP\AnnTaylor\Debug\AnnTaylor.exe
+D:\CPP\AnnTaylor\Debug\AnnTaylor.pdb
